@@ -1,12 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/', // Change this to the subpath if your app is not at the root
+  base: '/docs/', // Adjust if hosted on a subpath (e.g., '/docs/')
   build: {
-    outDir: '/dist', // Ensure this matches your build command output directory
+    outDir: '.vitepress/dist',
     emptyOutDir: true,
-  },
-  server: {
-    open: true,
   },
 });
