@@ -1,13 +1,16 @@
-// vite.config.js
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/', // Adjust this if your site is hosted at a subpath, e.g., '/my-vitepress-site/'
+  base: '/', // Adjust for sub-path if needed
   build: {
-    outDir: '.vitepress/dist', // The folder where VitePress will output the static files
+    outDir: '.vitepress/dist', // Vercel expects the built static files here
     emptyOutDir: true, // Clean the dist folder before building
+    assetsDir: 'assets', // Specify assets directory if needed
   },
   server: {
-    open: true, // Automatically open the preview in the browser
+    open: true, // Automatically open the preview in the browser (optional for production)
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify('production'),
   },
 });
