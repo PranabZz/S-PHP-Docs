@@ -1,13 +1,12 @@
-// vite.config.js
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',  // Set this to your site base, e.g., '/my-vitepress-site/' if hosted in a subfolder
+  base: '/', // Change this to the subpath if your app is not at the root
   build: {
-    outDir: '.vitepress/dist',  // Ensure output directory matches Vercel's build setup
-    emptyOutDir: true,  // Clean the dist folder before building
+    outDir: '.vitepress/dist', // Ensure this matches your build command output directory
+    emptyOutDir: true,
   },
   server: {
-    open: true,  // Optional: Automatically open the browser on dev server startup
+    open: true,
   },
 });
