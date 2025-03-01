@@ -49,6 +49,12 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Commands',
+        items: [
+          { text: 'CLI Commands', link: '/cli/commands' },
+        ]
+      },
+      {
         text: 'Advanced Topics',
         items: [
           { text: 'Custom Middleware', link: '/advanced/custom-middleware' },
